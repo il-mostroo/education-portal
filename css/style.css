@@ -74,6 +74,8 @@ a, a:hover, a:active, a:visited {
     background-color: orange;
     margin-right: 15px;
 }
+
+/*footer*/
 .footer {
     background-color: cyan;
     height: 300px;
