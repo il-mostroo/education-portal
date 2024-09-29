@@ -5,7 +5,7 @@ const closeMenuIcon = document.querySelector(".close-menu");
 
 openMenuIcon.addEventListener("click", () => {
     openMenuIcon.classList.add("hide");
-    mainNavigation.classList.add("show-mobile-menu")
+    mainNavigation.classList.add("show-mobile-menu");
     closeMenuIcon.classList.remove("hide");
 })
 
