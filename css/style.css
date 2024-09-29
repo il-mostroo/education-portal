@@ -10,8 +10,38 @@
 
 /*body*/
 body {
-    min-height: 100vh;
-    
+    min-height: 100vh;  
 }
 
+.hide {
+    display: none;
+}
 /*header*/
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem clamp(1.188rem, -1.519rem + 11.549vw, 8.875rem); 
+    position: relative;
+}
+.logo img {
+    width: 5rem;
+}
+.show-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 129px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+}
+a, a:hover, a:visited, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
