@@ -1,6 +1,6 @@
 //mobile menu effect:
 const openMenuIcon = document.querySelector(".open-menu");
-const mainNavigation = document.querySelector(".main-navigation");
+const mainNavigation = document.querySelector(".navigation-items");
 const closeMenuIcon = document.querySelector(".close-menu");
 
 openMenuIcon.addEventListener("click", () => {

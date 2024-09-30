@@ -18,7 +18,7 @@ body {
 .logo img {
     width: 5rem;
 }
-.main-navigation {
+.navigation-items {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -40,8 +40,11 @@ body {
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
 }
-.main-navigation a {
+.navigation-items li {
     margin-bottom: 1.5625rem;
+}
+li {
+    list-style: none;
 }
 a, a:hover, a:visited, a:focus, a:active {
     text-decoration: none;
