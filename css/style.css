@@ -20,7 +20,19 @@ body {
 .logo img {
     width: 5rem;
 }
-.navigation-items {
+li {
+    list-style: none;
+}
+a, a:hover, a:visited, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+.cours-item, .tronc-item, .bac-item {
+    display: flex;
+    align-items: center;
+}
+/* main mobile menu animation */
+.main-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -33,33 +45,18 @@ body {
     max-height: 0;
     overflow: hidden;
 }
-.navigation-items li:not(.cours-item li), .cours-item {
-    margin-bottom: 1.5625rem;
-}
-li {
-    list-style: none;
-}
-a, a:hover, a:visited, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
-}
-.cours-item {
-    display: flex;
-    align-items: center;
-}
-/* main mobile menu animation */
-.hide-mobile-menu {
+.hide-main-menu {
     max-height: 0rem;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
 }
-.show-mobile-menu {
-    max-height: 18.75rem;
+.show-main-menu {
+    max-height: fit-content;
     transition: max-height 0.5s ease-in-out;
 }
 
-/* dropdown mobile menu animation */
-.sub-menu1 {
+/* cours menu animation */
+.cours-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -69,23 +66,59 @@ a, a:hover, a:visited, a:focus, a:active {
     max-height: 0;
     overflow: hidden;
 }
-.hide-sub-menu1 {
+.hide-cours-menu {
     max-height: 0rem;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
 }
-.show-sub-menu1 {
-    max-height: 18.75rem;
+.show-cours-menu {
+    max-height: fit-content;
     transition: max-height 0.5s ease-in-out;
 }
-.cours-item {
+
+/* tronc menu animation */
+.tronc-menu {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    width: 100vw;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
 }
-/* hero */
+.hide-tronc-menu {
+    max-height: 0rem;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.show-tronc-menu {
+    max-height: fit-content;
+    transition: max-height 0.5s ease-in-out;
+}
+
+/* bac menu animation */
+.bac-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+}
+.hide-bac-menu {
+    max-height: 0rem;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.show-bac-menu {
+    max-height: fit-content;
+    transition: max-height 0.5s ease-in-out;
+}
 .hero {
-    height: 300px;
+    height: 600px;
     background-color: rgb(73, 143, 160);
 }
 
