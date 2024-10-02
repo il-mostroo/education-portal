@@ -1,4 +1,4 @@
-//mobile menu effect:
+//selecting elements
 const mainMenu = document.querySelector(".main-menu");
 const openMainMenuIcon = document.querySelector(".open-main-menu");
 const closeMainMenuIcon = document.querySelector(".close-main-menu");
@@ -32,13 +32,25 @@ closeMainMenuIcon.addEventListener("click", () => {
 
 //cours menu hide and show functionality
 openCoursIcon.addEventListener("click", () => {
-    openCoursIcon.classList.add("hide");
-    coursMenu.classList.remove("hide-cours-menu");
-    coursMenu.classList.add("show-cours-menu");
-    closeCoursIcon.classList.remove("hide");
+        openCoursIcon.classList.add("hide");
+        coursMenu.classList.remove("hide-cours-menu");
+        coursMenu.classList.add("show-cours-menu");
+        closeCoursIcon.classList.remove("hide");
 })
 
 closeCoursIcon.addEventListener("click", () => {
+    //hide tronc menu
+    troncMenu.classList.remove("show-tronc-menu")
+    troncMenu.classList.add("hide-tronc-menu")
+    closeTroncIcon.classList.add("hide")
+    openTroncIcon.classList.remove("hide")
+
+    //hide bac menu
+    bacMenu.classList.remove("show-bac-menu")
+    bacMenu.classList.add("hide-bac-menu")
+    closeBacIcon.classList.add("hide")
+    openBacIcon.classList.remove("hide")
+
     closeCoursIcon.classList.add("hide");
     coursMenu.classList.add("hide-cours-menu");
     coursMenu.classList.remove("show-cours-menu");
@@ -47,10 +59,15 @@ closeCoursIcon.addEventListener("click", () => {
 
 //tronc menu hide and show functionality
 openTroncIcon.addEventListener("click", () => {
-    openTroncIcon.classList.add("hide");
-    troncMenu.classList.remove("hide-tronc-menu");
-    troncMenu.classList.add("show-tronc-menu");
-    closeTroncIcon.classList.remove("hide");
+    if (bacMenu.classList.contains("show-bac-menu")) {
+        bacMenu.classList.remove("show-bac-menu") && bacMenu.classList.add("hide-bac-menu")
+        closeBacIcon.classList.add("hide")
+        openBacIcon.classList.remove("hide")
+    }
+        openTroncIcon.classList.add("hide");
+        troncMenu.classList.remove("hide-tronc-menu");
+        troncMenu.classList.add("show-tronc-menu");
+        closeTroncIcon.classList.remove("hide");
 })
 
 closeTroncIcon.addEventListener("click", () => {
@@ -62,6 +79,11 @@ closeTroncIcon.addEventListener("click", () => {
 
 // bac menu hide and show functionality
 openBacIcon.addEventListener("click", () => {
+    if (troncMenu.classList.contains("show-tronc-menu")) {
+        troncMenu.classList.remove("show-tronc-menu") && troncMenu.classList.add("hide-tronc-menu")
+        closeTroncIcon.classList.add("hide")
+        openTroncIcon.classList.remove("hide")
+    }
     openBacIcon.classList.add("hide");
     bacMenu.classList.remove("hide-bac-menu");
     bacMenu.classList.add("show-bac-menu");

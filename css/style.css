@@ -121,7 +121,10 @@ a, a:hover, a:visited, a:focus, a:active {
     transition: max-height 0.5s ease-in-out;
 }
 
-/* tronc menu and bac menu positioning to the right   */
+/* sub menus left margin   */
+.tronc-item, .bac-item {
+    margin-left: 20px;
+}
  .tronc-menu {
     position: absolute;
     left: 200px;
