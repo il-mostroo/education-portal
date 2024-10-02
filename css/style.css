@@ -31,6 +31,9 @@ a, a:hover, a:visited, a:focus, a:active {
     display: flex;
     align-items: center;
 }
+.main-menu li:not(.cours-item li, .tronc-item li, .bac-item li), .cours-item, .tronc-item, .bac-item{
+    margin-bottom: 1.5rem;
+}
 /* main mobile menu animation */
 .main-menu {
     display: flex;
