@@ -15,38 +15,16 @@
             <nav class="main-navigation">
                 <ul class="main-menu hide-main-menu">
                     <li><a href="#acceuil">Acceuil</a></li>
-                    <div class="cours-item">
-                        <li><a href="#cours">Cours</a></li>
-                        <img class="open-cours-icon" src="assets/arrow-down.svg" alt="arrow-drop-down-icon">
-                        <img class="close-cours-icon hide" src="assets/arrow-up.svg" alt="arrow-drop-up-icon">
-                    </div>
-                    <ul class="cours-menu sub-menu hide-cours-menu">
-                        <div class="tronc-item">
-                            <li><a href="#tronc-commun">Tronc commun</a></li>
-                            <img class="open-tronc-icon" src="assets/arrow-down.svg" alt="arrow-drop-down-icon">
-                            <img class="close-tronc-icon hide" src="assets/arrow-up.svg" alt="arrow-drop-up-icon">
-                        </div>
-                        <ul class="tronc-menu sub-menu hide-tronc-menu">
-                            <li><a href="#lecture">Lecture</a></li>
-                            <li><a href="#langue">Langue</a></li>
-                            <li><a href="#production-ecrite">Production ecrite</a></li>
-                            <li><a href="#production-orale">Production orale</a></li>
-                            <li><a href="#traveaux-encadres">Traveaux encadres</a></li>
-                            <li><a href="#resumes">Resumes</a></li>
-                        </ul>
-                        <div class="bac-item">
-                            <li><a href="#bac">1BAC</a></li>
-                            <img class="open-bac-icon" src="assets/arrow-down.svg" alt="arrow-drop-down-icon">
-                            <img class="close-bac-icon hide" src="assets/arrow-up.svg" alt="arrow-drop-up-icon">
-                        </div>
-                        <ul class="bac-menu sub-menu hide-bac-menu">
-                            <li><a href="#etude-de-texte">Etude de texte</a></li>
-                            <li><a href="#langue">Langue</a></li>
-                            <li><a href="#production-ecrite">Production ecrite</a></li>
-                            <li><a href="#production-orale">Production orale</a></li>
-                            <li><a href="#traveaux-encadres">Traveaux encadres</a></li>
-                            <li><a href="#resumes">Resumes</a></li>
-                        </ul>
+                    <li class="cours-item">
+                        <a href="#cours">Cours</a>
+                        <button class="cours-toggle" aria-expanded="false" aria-controls="cours-menu">
+                            <img class="open-cours-icon" src="assets/arrow-down.svg" alt="Open Cours Menu">
+                            <img class="close-cours-icon hide" src="assets/arrow-up.svg" alt="Close Cours Menu">
+                        </button>
+                    </li>
+                    <ul class="cours-menu hide-cours-menu" id="cours-menu">
+                        <li><a href="#tronc-commun">Tronc commun</a></li>
+                        <li><a href="#bac">1BAC</a></li>
                     </ul>
                     <li><a href="#examens-corrections">Examens/Corrections</a></li>
                     <li><a href="#fiches-pedagogiques">Fiches Pédagogiques</a></li>

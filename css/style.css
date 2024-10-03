@@ -6,9 +6,6 @@
 body {
     min-height: 100vh;  
 }
-.hide {
-    display: none;
-}
 
 /* header */
 .site-header {
@@ -20,123 +17,65 @@ body {
 .logo img {
     width: 5rem;
 }
-li {
+li:not(.cours-menu li) {
     list-style: none;
 }
 a, a:hover, a:visited, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
-.cours-item, .tronc-item, .bac-item {
+.cours-item {
     display: flex;
     align-items: center;
 }
-.main-menu li:not(.cours-item li, .tronc-item li, .bac-item li), .cours-item, .tronc-item, .bac-item{
+.main-menu li:not(.cours-item li), .cours-item{
     margin-bottom: 1.5rem;
 }
-/* main mobile menu animation */
-.main-menu {
+
+/* movile menus hide and display functionality */
+.main-menu, .cours-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: start;
+    width: 100vw;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;    
+}
+.hide-main-menu, .hide-cours-menu {
+    max-height: 0rem;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.show-main-menu, .show-cours-menu {
+    max-height: 31.25rem;
+    transition: max-height 0.5s ease-in-out;
+}
+.main-menu {
     position: absolute;
     top: 8.0625rem;
     left: 0;
-    width: 100vw;
-    background-color: white;
-    max-height: 0;
     padding-left: 1.1875rem;
 }
-.hide-main-menu {
-    max-height: 0rem;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-}
-.show-main-menu {
-    max-height: 1500px;
-    transition: max-height 0.5s ease-in-out;
-}
-
-/* cours menu animation */
 .cours-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-    width: 100vw;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
+    padding-left: 1.875rem;
 }
-.hide-cours-menu {
-    max-height: 0rem;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+.cours-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
-.show-cours-menu {
-    max-height: 1500px;
-    transition: max-height 0.5s ease-in-out;
-}
-
-/* tronc menu animation */
-.tronc-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-    width: 100vw;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-}
-.hide-tronc-menu {
-    max-height: 0rem;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-}
-.show-tronc-menu {
-    max-height: 1500px;
-    transition: max-height 0.5s ease-in-out;
-}
-
-/* bac menu animation */
-.bac-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-    width: 100vw;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-}
-.hide-bac-menu {
-    max-height: 0rem;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-}
-.show-bac-menu {
-    max-height: 1500px;
-    transition: max-height 0.5s ease-in-out;
-}
-
-/* sub menus left margin   */
-.tronc-item, .bac-item {
-    margin-left: 20px;
-}
- .tronc-menu {
-    position: absolute;
-    left: 200px;
-    top: 93px;
-}
-.bac-menu {
-    position: absolute;
-    left: 200px;
-    top: 140px;
+.contact-button {
+    background-color: #65DEF1;
+    padding: 10px;
+    border-radius: 10px;
 }
 .hero {
     height: 600px;
     background-color: rgb(73, 143, 160);
 }
-
+.hide {
+    display: none;
+}
