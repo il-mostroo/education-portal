@@ -80,7 +80,8 @@ a, a:visited, a:focus, a:active {
     justify-content: space-between;
     align-items: center;
     height: 600px;
-    background: url(/assets/hero-wallpaper.jpg)
+    background-image: url(/assets/hero-wallpaper.jpg);
+    background-size: cover;
 }
 .hero h1 {
     color: #F1F1F1;
