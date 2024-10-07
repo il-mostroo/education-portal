@@ -8,21 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <header class="site-header">
-            <div class="logo">
-                <img src="assets/logo1.png" alt="logo">
-            </div>
-            <nav class="main-navigation">
+        <header class="header">
+            <img src="assets/logo1.png" class="logo" alt="logo">
+            <nav class="navigation">
                 <ul class="main-menu hide-main-menu">
                     <li><a href="#acceuil">Acceuil</a></li>
                     <li class="cours-item">
                         <a href="#cours">Cours</a>
-                        <button class="cours-toggle" aria-expanded="false" aria-controls="cours-menu">
+                        <button class="cours-toggle-button" aria-expanded="false" aria-controls="cours-menu">
                             <img class="open-cours-icon" src="assets/arrow-down.svg" alt="Open Cours Menu">
                             <img class="close-cours-icon hide" src="assets/arrow-up.svg" alt="Close Cours Menu">
                         </button>
                     </li>
-                    <ul class="cours-menu hide-cours-menu" id="cours-menu">
+                    <ul class="cours-menu hide-cours-menu">
                         <li><a href="#tronc-commun">Tronc commun</a></li>
                         <li><a href="#bac">1BAC</a></li>
                     </ul>
@@ -33,21 +31,18 @@
             <img class="open-main-menu" src="assets/open-menu.svg" alt="open-menu-icon">
             <img class="close-main-menu hide" src="assets/close-menu.svg" alt="close-menu-icon">
         </header>
+
+        <!-- hero section  -->
         <section class="hero">
             <h1>Learn french through topics that matter</h1>
             <a href="#fiches-pedagogiques" class="cta-button">Explorez nos Fiches</a>
             <a href="#fiches-pedagogiques" class="cta-button">Naviguez nos cours</a>
         </section>
 
-        <!-- <section class="top-picks">
-            <h2>Meilleurs articles</h2>
-        </section> -->
-
+        <!-- footer section -->
         <footer>
             <div class="contact">
-                <div class="logo">
-                    <img src="assets/logo1.png" alt="logo">
-                </div>
+                <img src="assets/logo1.png" class="logo" alt="logo">
                 <div class="socials">
                     <img src="assets/facebook.png" alt="facebook logo">
                     <img src="assets/linkedin.png" alt="linked logo">
@@ -58,6 +53,7 @@
                     <a href="tel:+1234567890">+212 612 34 56 78</a>
                 </div>
             </div>
+            
             <div class="footer-cta">
                 <p>Contactez-nous pour accéder à nos fiches pédagogiques professionnelles</p>
                 <div class="cta-link">
@@ -82,6 +78,7 @@
                     <li><a href="examens-corrections">Examens-corrections</a></li>
                 </ul>
             </section>
+            <p>&#169;	2024 francaisAvecYaz, Tous droits reserves.</p>
         </footer>
     </div>
     <script src="script.js"></script>
