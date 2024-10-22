@@ -19,6 +19,7 @@ body {
 
 /* header */
 .header {
+    background-color: rebeccapurple;
     padding: 1.1rem clamp(1.188rem, -1.519rem + 11.549vw, 8.875rem); 
     justify-content: space-between;
 }
@@ -158,4 +159,42 @@ footer {
 }
 .quick-links li, .main-menu li, footer p {
     color: var(--primary-text-color);
+}
+footer p {
+    font-size: .8rem;
+    font-weight: bolder;
+}
+
+@media only screen and (min-width: 800px) {
+    .open-main-menu-icon {
+        display: none;
+    }
+    .header nav {
+        max-width: 100%;
+    }
+    .main-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: 100%;
+        height: auto;
+        align-items: center;
+        overflow: visible;
+        position: static;
+        top: auto;
+        left: auto;
+        padding: 0;
+    }
+    .main-menu li:not(.cours-item li), .cours-item{
+        margin-bottom: initial;
+    }
+    .cours-item {
+        position: relative;
+    }
+    .cours-menu {
+        width: 165px;
+        position: absolute;
+        top: 125px;
+        left: 20px;
+    }
 }
