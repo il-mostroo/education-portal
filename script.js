@@ -1,7 +1,7 @@
 //selecting elements
 const mainMenu = document.querySelector(".main-menu");
-const openMainMenuIcon = document.querySelector(".open-main-menu");
-const closeMainMenuIcon = document.querySelector(".close-main-menu");
+const openMainMenuIcon = document.querySelector(".open-main-menu-icon");
+const closeMainMenuIcon = document.querySelector(".close-main-menu-icon");
 
 const coursMenu = document.querySelector(".cours-menu");
 const openCoursIcon = document.querySelector(".open-cours-icon");
