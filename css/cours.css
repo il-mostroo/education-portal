@@ -1,0 +1,10 @@
+.cours-section {
+    padding: 20px;
+    background-color: rgb(175, 232, 232);
+}
+.cours-section-header {
+    font-family: var(--playfair-display);
+    font-size: clamp(3rem, 2.2683rem + 3.122vw, 4rem);
+    font-weight: 500;
+
+}

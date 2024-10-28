@@ -18,7 +18,7 @@ body {
 }
 
 /* common styles*/
-li:not(.cours-menu li) {
+li {
     list-style: none;
 }
 a, a:visited, a:focus, a:active {
@@ -30,7 +30,7 @@ a, a:visited, a:focus, a:active {
     flex-direction: column;
     align-items: center;
 }
-.cta-link, .whatsapp-social, .header, .cours-item-divider{
+.cta-link, .whatsapp-social, .header{
     display: flex;
     align-items: center;
 }
@@ -45,7 +45,9 @@ a:active, button:active {
     background-color: #ddd; 
     transform: scale(0.98); 
 }
-
+.hide {
+    display: none;
+}
 /* header */
 .header {
     padding: 1.1rem clamp(1.188rem, -1.519rem + 11.549vw, 8.875rem); 
@@ -54,7 +56,7 @@ a:active, button:active {
 .logo {
     width: 5rem;
 }
-.main-menu, .cours-menu {
+.main-menu {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -62,12 +64,12 @@ a:active, button:active {
     background-color: white;
     overflow: hidden;    
 }
-.hide-main-menu, .hide-cours-menu {
+.hide-main-menu {
     max-height: 0rem;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
 }
-.show-main-menu, .show-cours-menu {
+.show-main-menu {
     max-height: 31.25rem;
     transition: max-height 0.5s ease-in-out;
 }
@@ -82,18 +84,6 @@ a:active, button:active {
 }
 .main-menu > li {
     margin-bottom: 2rem;
-}
-.cours-menu li {
-    margin-top: 2rem;
-}
-.cours-menu {
-    padding-left: 1.875rem;
-}
-.cours-toggle-button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
 }
 
 @media only screen and (min-width: 50rem) {
@@ -116,23 +106,8 @@ a:active, button:active {
         left: auto;
         padding: 0;
     }
-    .main-menu li:not(.cours-item li), .cours-item{
+    .main-menu li{
         margin-bottom: initial;
-    }
-    .cours-item {
-        position: relative;
-    }
-    .cours-menu {
-        width: 10.3125rem;
-        position: absolute;
-        top: 4.6875rem;
-        left: 3.4375rem;
-    }
-    .cours-menu li:first-child {    
-        margin-top: 0;
-    }
-    .cours-menu li:last-child {
-        margin-bottom: 2rem;
     }
 }
 

@@ -43,4 +43,3 @@ closeCoursIcon.addEventListener("click", () => {
     coursMenu.classList.remove("show-cours-menu");
     openCoursIcon.classList.remove("hide");
 })
-
