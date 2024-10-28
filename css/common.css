@@ -1,0 +1,185 @@
+:root {
+    --nunito-sans: "Nunito Sans", sans-serif;;
+    --playfair-display: "Playfair Display", serif;
+    --headers-color: #000000;
+    --blue-color: rgb(11,52,147);
+    --buttons-text-color: rgb(255,255,255);
+    --contact-number-color: rgb(24, 66, 5);
+    --primary-text-color: rgb(46, 45, 45);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;  
+}
+
+/* common styles*/
+li:not(.cours-menu li) {
+    list-style: none;
+}
+a, a:visited, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+.footer-cta, .contact, footer, .quick-links, .quick-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cta-link, .whatsapp-social, .header, .cours-item-divider{
+    display: flex;
+    align-items: center;
+}
+.quick-links li, .main-menu li, footer p {
+    color: var(--primary-text-color);
+}
+footer p {
+    font-size: .8rem;
+    font-weight: bolder;
+}
+a:active, button:active {
+    background-color: #ddd; 
+    transform: scale(0.98); 
+}
+
+/* header */
+.header {
+    padding: 1.1rem clamp(1.188rem, -1.519rem + 11.549vw, 8.875rem); 
+    justify-content: space-between;
+}
+.logo {
+    width: 5rem;
+}
+.main-menu, .cours-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100vw;
+    background-color: white;
+    overflow: hidden;    
+}
+.hide-main-menu, .hide-cours-menu {
+    max-height: 0rem;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.show-main-menu, .show-cours-menu {
+    max-height: 31.25rem;
+    transition: max-height 0.5s ease-in-out;
+}
+.main-menu {
+    position: absolute;
+    top: 6.9rem;
+    left: 0;
+    padding-left: 1.1875rem;
+    padding-top: 1rem;
+    font-family: var(--nunito-sans);
+    font-weight: bolder;
+}
+.main-menu > li {
+    margin-bottom: 2rem;
+}
+.cours-menu li {
+    margin-top: 2rem;
+}
+.cours-menu {
+    padding-left: 1.875rem;
+}
+.cours-toggle-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media only screen and (min-width: 50rem) {
+    .open-main-menu-icon, .close-main-menu-icon {
+        display: none;
+    }
+    .header nav {
+        max-width: 100%;
+    }
+    .main-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: 100%;
+        height: auto;
+        align-items: center;
+        overflow: visible;
+        position: static;
+        top: auto;
+        left: auto;
+        padding: 0;
+    }
+    .main-menu li:not(.cours-item li), .cours-item{
+        margin-bottom: initial;
+    }
+    .cours-item {
+        position: relative;
+    }
+    .cours-menu {
+        width: 10.3125rem;
+        position: absolute;
+        top: 4.6875rem;
+        left: 3.4375rem;
+    }
+    .cours-menu li:first-child {    
+        margin-top: 0;
+    }
+    .cours-menu li:last-child {
+        margin-bottom: 2rem;
+    }
+}
+
+/* footer */
+footer {
+    height: 700px;
+    justify-content: space-evenly;
+    padding: 0 1.1875rem;
+    font-family: var(--nunito-sans);
+    background: linear-gradient(90deg, rgba(214,243,249,1) 0%, rgba(163,165,166,1) 100%);
+}
+.whatsapp-social {
+    margin-top: 1.875rem;
+}
+.socials img, .whatsapp-social img {
+    width: 1.875rem;
+    margin-right: 0.625rem;
+}
+.whatsapp-social a {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--contact-number-color);
+}
+.footer-cta {
+    display: flex !important;
+    visibility: visible !important;
+}
+
+.footer-cta p {
+    max-width: 80%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.9375rem;
+    color: var(--primary-text-color);
+}
+.footer-cta .cta-link a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--blue-color);
+}
+.quick-links h3 {
+    margin-bottom: 0.9375rem;
+}
+.niveaux li:first-child, .liens-utiles li {
+    margin-bottom: 0.625rem;
+}
+.quick-links h3 {
+    color: var(--headers-color);
+}
