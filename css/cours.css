@@ -1,20 +1,23 @@
 .cours-section {
-    padding: 0 20px;
+    padding: 40px 20px 0px 20px;
     background-color: #F8FAFF;
+}
+.bac-section {
+    padding: 0px 20px 0px 20px;
 }
 .cours-section-header {
     font-family: var(--playfair-display);
     font-size: clamp(2rem, 1.296rem + 3.005vw, 3rem);
     font-weight: 700;
     color: #222222;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 }
 .cours-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 70px 0;
+    padding: 110px 0 0 0;
 }
 .cours-item {
     position: relative;
